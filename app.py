@@ -24,6 +24,9 @@ class MyJSONEncoder(JSONEncoder):
 app = Flask(__name__)
 app.json_encoder = MyJSONEncoder
 
+if 'MONGODB_URI' in os.environ:
+    app.config['MONGO_URI'] = os.environ['MONGODB_URI']
+
 tesco = Tesco(os.environ['TESCO_API_KEY'])
 
 mongo = PyMongo(app)
