@@ -1,0 +1,7 @@
+certifi==2017.7.27.1
+chardet==3.0.4
+idna==2.6
+pytz==2017.2
+requests==2.18.4
+-e git+https://github.com/thomasleese/pytesco.git@5e280e13e32150808bc76a1fe850030034814054#egg=tesco
+urllib3==1.22
